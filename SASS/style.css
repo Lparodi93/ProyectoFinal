@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*---------------------------INICIO--------------------------------/
+
+/*------------------------HEADER-------------------------*/
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header .headerBg {
+  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
+  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
+}
+
+.header .headerLista {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header .headerLista a {
+  font: 1.5rem "Shippori Antique", sans-serif;
+  color: moccasin;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.header .headerLista a:hover {
+  font-size: 3rem;
+  -webkit-transition: 0.30s;
+  transition: 0.30s;
+}
+
+/*-----------------------AVISOTITLE---------------------*/
+.avisoTitle {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  color: moccasin;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: moccasin;
+}
+
+.avisoTitle h4 {
+  font-size: 1rem;
+}
+
+/*------------------------MainCarusel--------------------*/
+.mainText {
+  top: 20%;
+}
+
+.mainText p {
+  font: 2rem "Josefin Sans", sans-serif;
+  color: moccasin;
+  font-weight: 700;
+}
+
+/*-----------------------ContainerSection----------------*/
+.containerSection {
+  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
+  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
+}
+
+/*---------------------------Aside-----------------------*/
+.containerAside img {
+  width: 300px;
+  height: 220px;
+}
+
+/*---------------------------Footer----------------------*/
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  height: auto;
+}
+
+.footer h3 {
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+.footer .footerLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .footerLink a {
+  margin: 3px;
+  text-decoration: none;
+  color: white;
+  width: 10%;
+}
+
+.footer .footerLink a span {
+  padding: 5px;
+}
+
+.footer .footerLey {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+/*---------------------MEDIAQ----------------------*/
+@media screen and (max-width: 1200px) {
+  .containerSection {
+    display: none;
+  }
+  .footerLink {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0 auto;
+  }
+  .footerLink span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .headerLista {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .containerMain p {
+    font-size: 1.3rem;
+  }
+  .containerAside img {
+    padding: 10px;
+    width: 180px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .containerMain p {
+    font-size: 1rem;
+  }
+  .avisoTitle h4 {
+    font-size: 0.7rem;
+  }
+  .containerTitle h2 {
+    padding: 5px;
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

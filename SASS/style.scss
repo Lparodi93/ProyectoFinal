@@ -1,0 +1,164 @@
+@import 'intColor', 'intFont';
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;   
+}
+/*---------------------------INICIO--------------------------------/
+
+/*------------------------HEADER-------------------------*/
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    
+    & &Bg{
+        background-image: $fondoColor;
+    }
+
+    & &Lista{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        a{
+            font: $headerStyle;
+            color: $textColor; 
+            text-decoration: none;  
+            margin: 20px;
+        }
+    }
+    
+    & &Lista a:hover{
+        font-size: 3rem; 
+        transition: 0.30s;
+    }
+}
+/*-----------------------AVISOTITLE---------------------*/
+.avisoTitle {
+    height: 40px;
+    display: flex;
+    background-color: $bgDark;
+    color: $textColor;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $textColor;
+
+    h4{
+        font-size: 1rem;
+    }
+}
+/*------------------------MainCarusel--------------------*/
+
+.mainText{
+    top: 20%;
+
+    p{
+        font: $mainStyle;
+        color: $textColor;
+        font-weight: 700;
+    }
+}
+
+/*-----------------------ContainerSection----------------*/
+.containerSection{
+    background-image: $fondoColor;
+}
+
+/*---------------------------Aside-----------------------*/
+.containerAside img {
+    width: 300px;
+    height: 220px;
+}
+
+/*---------------------------Footer----------------------*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: $bgDark;
+    height: auto;
+
+    h3{
+        padding: 5px;
+        text-align: center;
+        color: $textWhite;
+    }
+
+    & &Link{
+        display: flex;
+        flex-direction: column;
+
+        a{
+            margin: 3px;
+            text-decoration: none;
+            color: $textWhite;
+            width: 10%;
+
+            span{
+                padding: 5px;
+            }
+        }
+
+    }
+
+    & &Ley{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $textWhite;
+    }
+}
+/*---------------------MEDIAQ----------------------*/
+@media screen and (max-width: 1200px) {
+    .containerSection{
+        display: none;
+    }
+
+    .footerLink {
+        justify-content: space-around;
+        flex-direction: row;
+        margin: 0 auto;
+
+        span{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .headerLista {
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .containerMain p{
+        font-size: 1.3rem;
+    }
+
+    .containerAside img{
+        padding: 10px;
+        width: 180px;
+        height: 140px;
+        }
+}
+
+@media screen and (max-width: 520px) {
+    .containerMain p{
+        font-size: 1rem;
+    }
+
+    .avisoTitle h4{
+        font-size: 0.7rem;
+    }
+
+    .containerTitle h2{
+        padding: 5px;
+        font-size: 1rem;
+    }
+}
+
+
