@@ -38,6 +38,7 @@
 
 .header .headerLista a:hover {
   font-size: 3rem;
+  color: white;
   -webkit-transition: 0.30s;
   transition: 0.30s;
 }
@@ -143,6 +144,39 @@
       -ms-flex-align: center;
           align-items: center;
   color: white;
+}
+
+/*---------------------Productos-----------------------------/*
+/*----------------------Title----------------------*/
+.titleProducts {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  border-top: 1px moccasin solid;
+  border-bottom: 1px moccasin solid;
+}
+
+.titleProducts h1 {
+  font: 1.8rem "Shippori Antique", sans-serif;
+  color: moccasin;
+}
+
+#containerMainProducts {
+  background-image: url(../img/fondoproductos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#containerMainProducts h2 {
+  color: moccasin;
 }
 
 /*---------------------MEDIAQ----------------------*/

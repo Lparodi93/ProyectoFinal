@@ -32,6 +32,7 @@
     
     & &Lista a:hover{
         font-size: 3rem; 
+        color: white;
         transition: 0.30s;
     }
 }
@@ -110,6 +111,33 @@
         justify-content: center;
         align-items: center;
         color: $textWhite;
+    }
+}
+
+/*---------------------Productos-----------------------------/*
+/*----------------------Title----------------------*/
+.titleProducts{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgDark;
+    border-top: 1px moccasin solid;
+    border-bottom: 1px moccasin solid;
+
+    h1{
+        font: $titleStyle;
+        color: moccasin;
+    }
+}
+
+#containerMainProducts{
+    background-image: url(../img/fondoproductos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2{
+        color: $textColor;
     }
 }
 /*---------------------MEDIAQ----------------------*/
