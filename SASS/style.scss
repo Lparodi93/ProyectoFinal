@@ -114,8 +114,8 @@
     }
 }
 
-/*---------------------Productos-----------------------------/*
-/*----------------------Title----------------------*/
+/*---------------------Productos-----------------------------*/
+
 .titleProducts{
     height: 50px;
     display: flex;
@@ -140,6 +140,189 @@
         color: $textColor;
     }
 }
+
+/*------------------------CONTACTO-------------------------*/
+
+.titleContact{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgDark;
+    border-top: 1px moccasin solid;
+    border-bottom: 1px moccasin solid;
+
+    h1{
+        font: $titleStyle;
+        color: moccasin;
+    }
+}
+
+.contacto{
+    display: flex;
+    justify-content: space-around;
+
+    & &Redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    & &Icon {
+        display: flex;
+        justify-content: space-around;       
+        span{
+            padding: 10px;
+            font: $mainStyle;
+            font-weight: 700;
+        }
+    }
+
+    & &Direccion{
+        font: $mainStyle;
+        font-weight: 700;
+    }
+
+    & &Mapa {
+        padding: 10px;
+    }
+}
+
+.containerFormulario{
+    display: flex;
+    justify-content: center;
+    background-image: $fondoColor;
+
+    legend {
+        font-size: 2rem;
+        color: white;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        color: white;
+        font-size: 1.2rem;
+
+        input{
+            height: 27px;
+        }
+    }
+
+    textarea{
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 96%;
+        height: 150px;
+    }
+
+    & &Sc {
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+
+        input{
+            height: 40px;
+            margin-left: 10px;
+            border-radius: 5px;
+            color: white;
+            padding: 1px;
+            background-color: tomato;
+        }
+
+        label {
+            margin-top: 8px;
+            margin-left: 10px;
+        }
+    }
+}
+
+/*------------------------NOSOTROS----------------------------*/
+
+.historiaTitle{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border-top: 1px solid $textColor;
+    border-bottom: 1px solid $textColor;
+
+    h1{
+        font: $titleStyle;
+        color: $textColor;
+    }
+}
+
+.nuestraHistoria {
+    background-color: rgb(63, 58, 58);
+    display: flex;
+    justify-content: center;
+
+    p{
+        width: 80%;
+        padding: 15px;
+        color: $textColor;
+        font: $mainStyle;
+    }
+}
+
+.galeria {
+    background-image: $fondoColor;
+
+    & &Fotos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        padding: 5px;
+
+        img{
+            width: 100%;
+            height: auto;
+            filter: grayscale(1);
+        }
+
+        img:hover{
+            filter: saturate(1);
+        }
+    }   
+}
+
+/*-------------------------CONSEJOS---------------------------*/
+.consejo {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border-top: 1px solid $textColor;
+    border-bottom: 1px solid $textColor;
+
+    h1 {
+        font: $titleStyle;
+        color: $textColor;
+    }
+
+    &Texto {
+        background-image: $fondoColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div{
+            padding: 10px;
+            width: 70%;
+            color: white;
+            font: $mainStyle;
+
+            p{
+                padding: 5px;
+                border: 2px black solid;
+                border-radius: 10px;
+                background-color: rgb(63, 58, 58);
+            }
+        }
+    }
+}
+
 /*---------------------MEDIAQ----------------------*/
 @media screen and (max-width: 1200px) {
     .containerSection{
@@ -153,6 +336,23 @@
 
         span{
             display: none;
+        }
+    }
+
+    .contacto{
+        flex-direction: column;
+
+        & &Icon{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & &Direccion {
+            margin-top: 20px;
+        }
+
+        & &Mapa{
+            margin-left:4rem;
         }
     }
 }
@@ -172,6 +372,28 @@
         width: 180px;
         height: 140px;
         }
+    
+    .contactoIcon img{
+        display: none;
+    }
+
+    .contactoIcon span {
+        display: none;
+    }
+
+    .contactoMapa{
+        height: 300px;
+        width: 400px;
+    }
+
+    .mobileNone{
+        display: none;
+    }
+
+    .fontList a{
+        font-size: 1rem;
+    }
+
 }
 
 @media screen and (max-width: 520px) {
@@ -187,6 +409,34 @@
         padding: 5px;
         font-size: 1rem;
     }
+
+    .contactoMapa{
+        height: 200px;
+        width: 200px;
+    }
+
+    .contactoDireccion p{
+        font-size: 1rem;
+    }
+
+    .containerFormulario {
+        display: none;
+    }
+
+    .titleContact h1{
+        font-size: 1.3rem;
+    }
+
+    .historiaTitle h1{
+        font-size: 1.3rem;
+    }
+
+    .nuestraHistoria p {
+        font-size: 1rem;
+    }
+
+    .titleProducts h1{
+        font-size: 1.3rem;
+    }
+
 }
-
-

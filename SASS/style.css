@@ -146,8 +146,7 @@
   color: white;
 }
 
-/*---------------------Productos-----------------------------/*
-/*----------------------Title----------------------*/
+/*---------------------Productos-----------------------------*/
 .titleProducts {
   height: 50px;
   display: -webkit-box;
@@ -179,6 +178,248 @@
   color: moccasin;
 }
 
+/*------------------------CONTACTO-------------------------*/
+.titleContact {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  border-top: 1px moccasin solid;
+  border-bottom: 1px moccasin solid;
+}
+
+.titleContact h1 {
+  font: 1.8rem "Shippori Antique", sans-serif;
+  color: moccasin;
+}
+
+.contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contacto .contactoRedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contacto .contactoIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contacto .contactoIcon span {
+  padding: 10px;
+  font: 2rem "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
+.contacto .contactoDireccion {
+  font: 2rem "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
+.contacto .contactoMapa {
+  padding: 10px;
+}
+
+.containerFormulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
+  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
+}
+
+.containerFormulario legend {
+  font-size: 2rem;
+  color: white;
+}
+
+.containerFormulario div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.containerFormulario div input {
+  height: 27px;
+}
+
+.containerFormulario textarea {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 96%;
+  height: 150px;
+}
+
+.containerFormulario .containerFormularioSc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1rem;
+}
+
+.containerFormulario .containerFormularioSc input {
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: white;
+  padding: 1px;
+  background-color: tomato;
+}
+
+.containerFormulario .containerFormularioSc label {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+/*------------------------NOSOTROS----------------------------*/
+.historiaTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  border-top: 1px solid moccasin;
+  border-bottom: 1px solid moccasin;
+}
+
+.historiaTitle h1 {
+  font: 1.8rem "Shippori Antique", sans-serif;
+  color: moccasin;
+}
+
+.nuestraHistoria {
+  background-color: #3f3a3a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nuestraHistoria p {
+  width: 80%;
+  padding: 15px;
+  color: moccasin;
+  font: 2rem "Josefin Sans", sans-serif;
+}
+
+.galeria {
+  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
+  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
+}
+
+.galeria .galeriaFotos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 5px;
+}
+
+.galeria .galeriaFotos img {
+  width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.galeria .galeriaFotos img:hover {
+  -webkit-filter: saturate(1);
+          filter: saturate(1);
+}
+
+/*-------------------------CONSEJOS---------------------------*/
+.consejo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  border-top: 1px solid moccasin;
+  border-bottom: 1px solid moccasin;
+}
+
+.consejo h1 {
+  font: 1.8rem "Shippori Antique", sans-serif;
+  color: moccasin;
+}
+
+.consejoTexto {
+  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
+  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.consejoTexto div {
+  padding: 10px;
+  width: 70%;
+  color: white;
+  font: 2rem "Josefin Sans", sans-serif;
+}
+
+.consejoTexto div p {
+  padding: 5px;
+  border: 2px black solid;
+  border-radius: 10px;
+  background-color: #3f3a3a;
+}
+
 /*---------------------MEDIAQ----------------------*/
 @media screen and (max-width: 1200px) {
   .containerSection {
@@ -195,6 +436,27 @@
   }
   .footerLink span {
     display: none;
+  }
+  .contacto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacto .contactoIcon {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacto .contactoDireccion {
+    margin-top: 20px;
+  }
+  .contacto .contactoMapa {
+    margin-left: 4rem;
   }
 }
 
@@ -216,6 +478,22 @@
     width: 180px;
     height: 140px;
   }
+  .contactoIcon img {
+    display: none;
+  }
+  .contactoIcon span {
+    display: none;
+  }
+  .contactoMapa {
+    height: 300px;
+    width: 400px;
+  }
+  .mobileNone {
+    display: none;
+  }
+  .fontList a {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 520px) {
@@ -228,6 +506,28 @@
   .containerTitle h2 {
     padding: 5px;
     font-size: 1rem;
+  }
+  .contactoMapa {
+    height: 200px;
+    width: 200px;
+  }
+  .contactoDireccion p {
+    font-size: 1rem;
+  }
+  .containerFormulario {
+    display: none;
+  }
+  .titleContact h1 {
+    font-size: 1.3rem;
+  }
+  .historiaTitle h1 {
+    font-size: 1.3rem;
+  }
+  .nuestraHistoria p {
+    font-size: 1rem;
+  }
+  .titleProducts h1 {
+    font-size: 1.3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
