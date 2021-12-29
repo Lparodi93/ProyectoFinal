@@ -4,6 +4,15 @@
   list-style: none;
 }
 
+/*Maps*/
+.fd-tl {
+  background-color: black;
+}
+
+.fd-ns {
+  background-color: #3f3a3a;
+}
+
 /*---------------------------INICIO--------------------------------/
 
 /*------------------------HEADER-------------------------*/
@@ -44,12 +53,11 @@
 }
 
 /*-----------------------AVISOTITLE---------------------*/
-.avisoTitle {
+.avisoTitle, .titleProducts, .titleContact, .historiaTitle, .consejo {
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: black;
   color: moccasin;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -62,7 +70,7 @@
   border-color: moccasin;
 }
 
-.avisoTitle h4 {
+.avisoTitle h4, .titleProducts h4, .titleContact h4, .historiaTitle h4, .consejo h4 {
   font-size: 1rem;
 }
 
@@ -73,8 +81,10 @@
 
 .mainText p {
   font: 2rem "Josefin Sans", sans-serif;
-  color: moccasin;
+  font-size: 2.5rem;
+  color: white;
   font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /*-----------------------ContainerSection----------------*/
@@ -85,8 +95,9 @@
 
 /*---------------------------Aside-----------------------*/
 .containerAside img {
-  width: 300px;
-  height: 220px;
+  padding: 10px;
+  width: 240px;
+  height: 140px;
 }
 
 /*---------------------------Footer----------------------*/
@@ -98,7 +109,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: black;
   height: auto;
 }
 
@@ -149,18 +159,6 @@
 /*---------------------Productos-----------------------------*/
 .titleProducts {
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
-  border-top: 1px moccasin solid;
-  border-bottom: 1px moccasin solid;
 }
 
 .titleProducts h1 {
@@ -181,18 +179,6 @@
 /*------------------------CONTACTO-------------------------*/
 .titleContact {
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
-  border-top: 1px moccasin solid;
-  border-bottom: 1px moccasin solid;
 }
 
 .titleContact h1 {
@@ -236,11 +222,13 @@
   padding: 10px;
   font: 2rem "Josefin Sans", sans-serif;
   font-weight: 700;
+  color: moccasin;
 }
 
 .contacto .contactoDireccion {
   font: 2rem "Josefin Sans", sans-serif;
   font-weight: 700;
+  color: moccasin;
 }
 
 .contacto .contactoMapa {
@@ -314,15 +302,7 @@
 
 /*------------------------NOSOTROS----------------------------*/
 .historiaTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: black;
-  border-top: 1px solid moccasin;
-  border-bottom: 1px solid moccasin;
+  height: 50px;
 }
 
 .historiaTitle h1 {
@@ -331,7 +311,6 @@
 }
 
 .nuestraHistoria {
-  background-color: #3f3a3a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,15 +354,7 @@
 
 /*-------------------------CONSEJOS---------------------------*/
 .consejo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: black;
-  border-top: 1px solid moccasin;
-  border-bottom: 1px solid moccasin;
+  height: 50px;
 }
 
 .consejo h1 {
@@ -417,7 +388,6 @@
   padding: 5px;
   border: 2px black solid;
   border-radius: 10px;
-  background-color: #3f3a3a;
 }
 
 /*---------------------MEDIAQ----------------------*/
@@ -500,7 +470,7 @@
   .containerMain p {
     font-size: 1rem;
   }
-  .avisoTitle h4 {
+  .avisoTitle h4, .titleProducts h4, .titleContact h4, .historiaTitle h4, .consejo h4 {
     font-size: 0.7rem;
   }
   .containerTitle h2 {

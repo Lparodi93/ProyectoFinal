@@ -5,6 +5,29 @@
     padding: 0;
     list-style: none;   
 }
+
+/*Maps*/
+$fondos: (
+    tl: black,
+    ns: rgb(63, 58, 58)
+);
+
+@each $nombre, $valor in $fondos {
+    .fd-#{$nombre} {
+        background-color: $valor;
+    }
+}
+
+$textos: (
+    t1: white,
+    t2: moccasin,
+);
+
+@mixin titles {
+    font: $titleStyle;
+    color: map-get($textos , t2);
+}
+
 /*---------------------------INICIO--------------------------------/
 
 /*------------------------HEADER-------------------------*/
@@ -32,7 +55,7 @@
     
     & &Lista a:hover{
         font-size: 3rem; 
-        color: white;
+        color: map-get($textos , t1);
         transition: 0.30s;
     }
 }
@@ -40,13 +63,12 @@
 .avisoTitle {
     height: 40px;
     display: flex;
-    background-color: $bgDark;
-    color: $textColor;
+    color: map-get($textos , t2);
     justify-content: center;
     align-items: center;
     border-top: 1px solid;
     border-bottom: 1px solid;
-    border-color: $textColor;
+    border-color: map-get($textos , t2);
 
     h4{
         font-size: 1rem;
@@ -59,8 +81,10 @@
 
     p{
         font: $mainStyle;
-        color: $textColor;
+        font-size: 2.5rem;
+        color: map-get($textos , t1);
         font-weight: 700;
+        background-color: rgba($color: #000000, $alpha: 0.3);
     }
 }
 
@@ -71,21 +95,21 @@
 
 /*---------------------------Aside-----------------------*/
 .containerAside img {
-    width: 300px;
-    height: 220px;
+    padding: 10px;
+    width: 240px;
+    height: 140px;
 }
 
 /*---------------------------Footer----------------------*/
 .footer{
     display: flex;
     flex-direction: column;
-    background-color: $bgDark;
     height: auto;
 
     h3{
         padding: 5px;
         text-align: center;
-        color: $textWhite;
+        color: map-get($textos , t1);
     }
 
     & &Link{
@@ -95,7 +119,7 @@
         a{
             margin: 3px;
             text-decoration: none;
-            color: $textWhite;
+            color: map-get($textos , t1);
             width: 10%;
 
             span{
@@ -110,24 +134,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: $textWhite;
+        color: map-get($textos , t1);
     }
 }
 
 /*---------------------Productos-----------------------------*/
 
 .titleProducts{
+    @extend .avisoTitle;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $bgDark;
-    border-top: 1px moccasin solid;
-    border-bottom: 1px moccasin solid;
 
     h1{
-        font: $titleStyle;
-        color: moccasin;
+        @include titles;
     }
 }
 
@@ -137,24 +155,19 @@
     background-repeat: no-repeat;
 
     h2{
-        color: $textColor;
+        color: map-get($textos , t2);
     }
 }
 
 /*------------------------CONTACTO-------------------------*/
 
 .titleContact{
+    @extend .avisoTitle;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $bgDark;
-    border-top: 1px moccasin solid;
-    border-bottom: 1px moccasin solid;
+
 
     h1{
-        font: $titleStyle;
-        color: moccasin;
+        @include titles;
     }
 }
 
@@ -176,12 +189,14 @@
             padding: 10px;
             font: $mainStyle;
             font-weight: 700;
+            color: map-get($textos , t2);
         }
     }
 
     & &Direccion{
         font: $mainStyle;
         font-weight: 700;
+        color: map-get($textos , t2);
     }
 
     & &Mapa {
@@ -196,14 +211,14 @@
 
     legend {
         font-size: 2rem;
-        color: white;
+        color: map-get($textos , t1);
     }
 
     div {
         display: flex;
         flex-direction: column;
         padding: 10px;
-        color: white;
+        color: map-get($textos , t1);
         font-size: 1.2rem;
 
         input{
@@ -227,7 +242,7 @@
             height: 40px;
             margin-left: 10px;
             border-radius: 5px;
-            color: white;
+            color: map-get($textos , t1);
             padding: 1px;
             background-color: tomato;
         }
@@ -242,20 +257,16 @@
 /*------------------------NOSOTROS----------------------------*/
 
 .historiaTitle{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    border-top: 1px solid $textColor;
-    border-bottom: 1px solid $textColor;
+    @extend .avisoTitle;
+    height: 50px;
+    
 
     h1{
-        font: $titleStyle;
-        color: $textColor;
+        @include titles;
     }
 }
 
 .nuestraHistoria {
-    background-color: rgb(63, 58, 58);
     display: flex;
     justify-content: center;
 
@@ -290,15 +301,11 @@
 
 /*-------------------------CONSEJOS---------------------------*/
 .consejo {
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    border-top: 1px solid $textColor;
-    border-bottom: 1px solid $textColor;
+    @extend .avisoTitle;
+    height: 50px;
 
     h1 {
-        font: $titleStyle;
-        color: $textColor;
+        @include titles;
     }
 
     &Texto {
@@ -310,14 +317,13 @@
         div{
             padding: 10px;
             width: 70%;
-            color: white;
+            color: map-get($textos , t1);
             font: $mainStyle;
 
             p{
                 padding: 5px;
                 border: 2px black solid;
                 border-radius: 10px;
-                background-color: rgb(63, 58, 58);
             }
         }
     }
