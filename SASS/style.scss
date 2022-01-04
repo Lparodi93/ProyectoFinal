@@ -94,11 +94,32 @@ $textos: (
 }
 
 /*---------------------------Aside-----------------------*/
-.containerAside img {
-    padding: 10px;
-    width: 240px;
+
+.asideLogo .logo{
+    
     height: 140px;
+    width: 220px;
 }
+
+.asideLogo .logo2{
+    
+    height: 150px;
+    width: 220px;
+}
+
+.asideLogo .logo3{
+    
+    height: 100px;
+    width: 300px;
+
+}
+.asideLogo .logo4{
+    
+    height: 100px;
+    width: 310px;
+}
+
+
 
 /*---------------------------Footer----------------------*/
 .footer{
@@ -443,6 +464,35 @@ $textos: (
 
     .titleProducts h1{
         font-size: 1.3rem;
+    }
+
+    .asideLogo img{
+        position: relative;
+        bottom: 45px;
+    }
+
+    .asideLogo .logo{
+    
+        height: 100px;
+        width: 120px;
+    }
+    
+    .asideLogo .logo2{
+        
+        height: 100px;
+        width: 140px;
+    }
+    
+    .asideLogo .logo3{
+        
+        height: 80px;
+        width: 200px;
+    
+    }
+    .asideLogo .logo4{
+        
+        height: 50px;
+        width: 210px;
     }
 
 }
