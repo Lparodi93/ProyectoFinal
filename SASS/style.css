@@ -7,10 +7,18 @@
 /*Maps*/
 .fd-tl {
   background-color: black;
+  background-image: black;
 }
 
 .fd-ns {
   background-color: #3f3a3a;
+  background-image: #3f3a3a;
+}
+
+.fd-hd {
+  background-color: linear-gradient(to left, #310b0b, #500b0b, black);
+  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
+  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
 }
 
 /*---------------------------INICIO--------------------------------/
@@ -21,11 +29,6 @@
   position: sticky;
   top: 0;
   z-index: 999;
-}
-
-.header .headerBg {
-  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
-  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
 }
 
 .header .headerLista {
@@ -46,7 +49,7 @@
 }
 
 .header .headerLista a:hover {
-  font-size: 3rem;
+  font-size: 1.7rem;
   color: white;
   -webkit-transition: 0.30s;
   transition: 0.30s;
@@ -95,7 +98,7 @@
 
 /*---------------------------Aside-----------------------*/
 .asideLogo .logo {
-  height: 140px;
+  height: 120px;
   width: 220px;
 }
 
@@ -110,8 +113,10 @@
 }
 
 .asideLogo .logo4 {
-  height: 100px;
-  width: 310px;
+  position: relative;
+  top: 20px;
+  height: 80px;
+  width: 400px;
 }
 
 /*---------------------------Footer----------------------*/
@@ -235,18 +240,17 @@
 .contacto .contactoIcon span {
   padding: 10px;
   font: 2rem "Josefin Sans", sans-serif;
-  font-weight: 700;
   color: moccasin;
 }
 
 .contacto .contactoDireccion {
   font: 2rem "Josefin Sans", sans-serif;
-  font-weight: 700;
   color: moccasin;
 }
 
 .contacto .contactoMapa {
   padding: 10px;
+  border-radius: 20px;
 }
 
 .containerFormulario {
@@ -394,14 +398,24 @@
 .consejoTexto div {
   padding: 10px;
   width: 70%;
-  color: white;
+  color: moccasin;
   font: 2rem "Josefin Sans", sans-serif;
+}
+
+.consejoTexto div h2 {
+  font-weight: 700;
 }
 
 .consejoTexto div p {
   padding: 5px;
   border: 2px black solid;
   border-radius: 10px;
+  color: white;
+}
+
+.consejoTexto div p span {
+  display: block;
+  padding-top: 5px;
 }
 
 /*---------------------MEDIAQ----------------------*/
@@ -442,6 +456,9 @@
   .contacto .contactoMapa {
     margin-left: 4rem;
   }
+  /*  .headerLista a:hover {
+        display: none;
+    } */
 }
 
 @media screen and (max-width: 992px) {
@@ -530,8 +547,13 @@
     width: 200px;
   }
   .asideLogo .logo4 {
+    position: relative;
+    top: -20px;
     height: 50px;
     width: 210px;
+  }
+  .mainDesc img {
+    height: 150px;
   }
 }
 /*# sourceMappingURL=style.css.map */

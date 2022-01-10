@@ -9,12 +9,14 @@
 /*Maps*/
 $fondos: (
     tl: black,
-    ns: rgb(63, 58, 58)
+    ns: rgb(63, 58, 58),
+    hd: linear-gradient(to left, rgb(49, 11, 11),rgb(80, 11, 11) , rgb(0,0,0))
 );
 
 @each $nombre, $valor in $fondos {
     .fd-#{$nombre} {
         background-color: $valor;
+        background-image: $valor;
     }
 }
 
@@ -35,10 +37,6 @@ $textos: (
     position: sticky;
     top: 0;
     z-index: 999;
-    
-    & &Bg{
-        background-image: $fondoColor;
-    }
 
     & &Lista{
         width: 100%;
@@ -54,7 +52,7 @@ $textos: (
     }
     
     & &Lista a:hover{
-        font-size: 3rem; 
+        font-size: 1.7rem; 
         color: map-get($textos , t1);
         transition: 0.30s;
     }
@@ -97,7 +95,7 @@ $textos: (
 
 .asideLogo .logo{
     
-    height: 140px;
+    height: 120px;
     width: 220px;
 }
 
@@ -114,9 +112,10 @@ $textos: (
 
 }
 .asideLogo .logo4{
-    
-    height: 100px;
-    width: 310px;
+    position: relative;
+    top: 20px;
+    height: 80px;
+    width: 400px;   
 }
 
 
@@ -209,19 +208,18 @@ $textos: (
         span{
             padding: 10px;
             font: $mainStyle;
-            font-weight: 700;
             color: map-get($textos , t2);
         }
     }
 
     & &Direccion{
         font: $mainStyle;
-        font-weight: 700;
         color: map-get($textos , t2);
     }
 
     & &Mapa {
         padding: 10px;
+        border-radius: 20px;
     }
 }
 
@@ -338,13 +336,24 @@ $textos: (
         div{
             padding: 10px;
             width: 70%;
-            color: map-get($textos , t1);
+            color: map-get($textos , t2);
             font: $mainStyle;
+
+            h2{
+                font-weight: 700;
+            }
 
             p{
                 padding: 5px;
                 border: 2px black solid;
                 border-radius: 10px;
+                color: map-get($textos , t1);
+                
+
+                span{
+                    display: block;
+                    padding-top: 5px;
+                }
             }
         }
     }
@@ -382,6 +391,10 @@ $textos: (
             margin-left:4rem;
         }
     }
+
+   /*  .headerLista a:hover {
+        display: none;
+    } */
 }
 
 @media screen and (max-width: 992px) {
@@ -491,8 +504,14 @@ $textos: (
     }
     .asideLogo .logo4{
         
+        position: relative;
+        top: -20px;
         height: 50px;
         width: 210px;
+    }
+
+    .mainDesc img{
+        height: 150px;
     }
 
 }
