@@ -286,15 +286,19 @@ $textos: (
 }
 
 .nuestraHistoria {
-    width: 100.8%;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.nuestraHistoria p{
+
+    p{
     width: 80%;
     padding: 15px;
     color: $textColor;
     font: $mainStyle;
     }
+
+}
 
 
 .galeria {
