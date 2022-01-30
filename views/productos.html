@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fenix Tabaco | Productos</title>
     <meta name="keywords" content="tabaco, cigarrillo, fumar, encendedor, pipa, filtro">
-    <meta name="description" content="Somos una tabaquería con más de 10 años de trayectoria. Ubicados en Quilmes centro, vendemos todo tipo de productos de calidad y excelencia en el mercado">
+    <meta name="description"
+        content="Somos una tabaquería con más de 10 años de trayectoria. Ubicados en Quilmes centro, vendemos todo tipo de productos de calidad y excelencia en el mercado">
     <link rel="shortcut icon" href="../img/Logo2.png">
     <link rel="stylesheet" href="../SASS/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,7 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,100;1,700&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -57,100 +59,82 @@
     </header>
 
 
-        <div class="titleProducts fd-tl">
-            <h1>Productos</h1>
+    <div class="titleProducts fd-tl">
+        <h1>Productos</h1>
+    </div>
+
+
+    <main id="containerMainProducts">
+
+        <div class="container-fluid p-5 gap-3 row justify-content-center containerMainProducts">
+            <div class="col-12 col-md-6 col-lg-3 row justify-content-center">
+                <div class="card cardShadow" style="width: 15rem;">
+                    <img src="../img/pipas.JPG" class="card-img-top p-2" alt="pipas">
+                    <div class="card-body">
+                        <h5 class="card-title">Pipas</h5>
+                        <a href="../views/products/pipas.html" class="btn btn-dark">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 row justify-content-center">
+                <div class="card cardShadow" style="width: 15rem;">
+                    <img src="../img/puros.JPG" class="card-img-top p-2" alt="puros">
+                    <div class="card-body">
+                        <h5 class="card-title">Cigarros</h5>
+                        <a href="../views/products/cigarros.html" class="btn btn-dark">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 row justify-content-center">
+                <div class="card cardShadow" style="width: 15rem;">
+                    <img src="../img/tabaco.jpg" class="card-img-top p-2" alt="puros">
+                    <div class="card-body">
+                        <h5 class="card-title">Tabaco</h5>
+                        <a href="../views/products/tabaco.html" class="btn btn-dark">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 row justify-content-center">
+                <div class="card cardShadow" style="width: 15rem;">
+                    <img src="../img/accesorios.JPG" class="card-img-top p-2" alt="otros">
+                    <div class="card-body">
+                        <h5 class="card-title">Otros</h5>
+                        <a href="../views/products/accesorios.html" class="btn btn-dark">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="avisoProducts fd-nt">
+        <p class="animate__animated animate__backInDown">No dudes en consultarnos!</p>
+    </div>
+
+
+    <footer class="footer fd-tl">
+        <h3>Nuestras Redes</h3>
+        <div class="footerLink">
+
+            <a href="https://www.instagram.com/fenixtabaco/" target="_blank"><img src="../img/insta.png" width="35"
+                    height="32" alt="Instagram"><span class="contentFooterRedes">Instagram</span></a>
+            <a href="https://www.facebook.com/fenixtabacoquilmes/" target="_blank"><img src="../img/face.png" width="33"
+                    height="32" alt="Facebook"><span class="contentFooterRedes2">Facebook</span></a>
         </div>
 
+        <div class="footerLey">
+            <p>Fumar es perjudicial para la salud.</p>
+            <p>Prohibida su venta a menores de 18 años</p>
+        </div>
 
-        <main id="containerMainProducts">
+    </footer>
 
-            <div class="container-fluid row p-5 gap-3">
-                <div class="col-12 col-md-6 col-lg-4 row justify-content-center">
-                    <div class="card bg-warning" style="width: 15rem;">
-                        <img src="../img/pipas.JPG" class="card-img-top" alt="pipas">
-                        <div class="card-body">
-                            <h5 class="card-title">Pipas</h5>
-                            <a href="../views/products/pipas.html" class="btn btn-dark">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 row justify-content-center">
-                    <div class="card bg-warning" style="width: 15rem;">
-                        <img src="../img/puros.JPG" class="card-img-top" alt="puros">
-                        <div class="card-body">
-                            <h5 class="card-title">Cigarros</h5>
-                            <a href="../views/products/cigarros.html" class="btn btn-dark">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 row justify-content-center">
-                    <div class="card bg-warning" style="width: 15rem;">
-                        <img src="../img/accesorios.JPG" class="card-img-top" alt="otros">
-                        <div class="card-body">
-                            <h5 class="card-title">Otros</h5>
-                            <a href="../views/products/accesorios.html" class="btn btn-dark">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-12">
-                    <h2 class="destacadoTitle mt-3">Destacados</h2>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 row justify-content-center">
-                    <div class="card bg-warning" style="width: 15rem;">
-                        <img src="../img/destacados1.JPG" class="card-img-top" alt="destacados">
-                        <div class="card-body">
-                            <h5 class="card-title">Maradona</h5>
-                            <a href="../views/products/cigarros.html" class="btn btn-dark">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 row justify-content-center">
-                    <div class="card bg-warning" style="width: 15rem;">
-                        <img src="../img/destacados2.JPG" class="card-img-top" alt="destacados">
-                        <div class="card-body">
-                            <h5 class="card-title">Tabaco Premium</h5>
-                            <a href="../views/products/tabaco.html" class="btn btn-dark">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 row justify-content-center">
-                    <div class="card bg-warning" style="width: 15rem;">
-                        <img src="../img/destacados3.JPG" class="card-img-top" alt="destacados">
-                        <div class="card-body">
-                            <h5 class="card-title">Picadores</h5>
-                            <a href="../views/products/accesorios.html" class="btn btn-dark">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </main>
-
-        <footer class="footer fd-tl">
-            <h3>Nuestras Redes</h3>
-            <div class="footerLink">
-
-                <a href="https://www.instagram.com/fenixtabaco/" target="_blank"><img src="../img/insta.png" width="35"
-                        height="32" alt="Instagram"><span class="contentFooterRedes">Instagram</span></a>
-                <a href="https://www.facebook.com/fenixtabacoquilmes/" target="_blank"><img src="../img/face.png"
-                        width="33" height="32" alt="Facebook"><span class="contentFooterRedes2">Facebook</span></a>
-            </div>
-
-            <div class="footerLey">
-                <p>Fumar es perjudicial para la salud.</p>
-                <p>Prohibida su venta a menores de 18 años</p>
-            </div>
-
-        </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
 

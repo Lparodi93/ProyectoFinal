@@ -1,4 +1,4 @@
-@import 'intColor', 'intFont';
+@import 'intFont';
 
 * {
     margin: 0;
@@ -9,8 +9,11 @@
 /*Maps*/
 $fondos: (
     tl: black,
-    ns: rgb(63, 58, 58),
-    hd: linear-gradient(to left, rgb(49, 11, 11),rgb(80, 11, 11) , rgb(0,0,0))
+    na: rgb(63, 58, 58),
+    ns: linear-gradient(to bottom, rgb(63, 58, 58), rgb(41, 39, 39), rgb(0, 0, 0)),
+    nt: linear-gradient(to bottom, rgb(0,0,0), rgb(41, 39, 39), rgb(0, 0, 0)),
+    hd: linear-gradient(to left, rgb(49, 11, 11),rgb(80, 11, 11) , rgb(0,0,0)),
+    hn: linear-gradient(to bottom, rgb(49, 11, 11),rgb(80, 11, 11) , rgb(0,0,0))
 );
 
 @each $nombre, $valor in $fondos {
@@ -30,6 +33,40 @@ $textos: (
     color: map-get($textos , t2);
 }
 
+@mixin gridProducts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    justify-items: center;
+    width: 100%;
+    padding: 30px;
+}
+
+@mixin allProducts {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-decoration: none; 
+}
+
+@mixin consult {   
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    color: map-get($textos , t1);
+    background-color: rgba(26, 25, 25, 0.705);  
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+@mixin imagProducts {
+    height: auto;
+    border-end-end-radius: 20px;
+    box-shadow: 10px 5px 5px black;
+    }
+
+
+
 /*---------------------------INICIO--------------------------------/
 
 /*------------------------HEADER-------------------------*/
@@ -45,7 +82,7 @@ $textos: (
 
         a{
             font: $headerStyle;
-            color: $textColor; 
+            color: map-get($textos , t2); 
             text-decoration: none;  
             margin: 20px;
         }
@@ -87,8 +124,9 @@ $textos: (
 }
 
 /*-----------------------ContainerSection----------------*/
-.containerSection{
-    background-image: $fondoColor;
+.containerSection img{
+    border-radius: 10px;
+    border: 10px solid black;
 }
 
 /*---------------------------Aside-----------------------*/
@@ -159,7 +197,6 @@ $textos: (
 }
 
 /*---------------------Productos-----------------------------*/
-
 .titleProducts{
     @extend .avisoTitle;
     height: 50px;
@@ -169,16 +206,134 @@ $textos: (
     }
 }
 
-#containerMainProducts{
-    background-image: url(../img/fondoproductos.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+#containerMainProducts{ 
+    height: auto;
+    background-image: linear-gradient(to bottom, rgb(49, 11, 11),rgb(80, 11, 11) , rgb(0,0,0));
 
     h2{
         color: map-get($textos , t2);
     }
 }
 
+.avisoProducts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    color: map-get($textos , t1 );
+
+    p{
+        font: $mainStyle;
+        font-weight: 700;
+    }
+}
+
+.cardShadow {
+    box-shadow: 10px 5px 5px black;
+}
+
+/*--------------------------Pipas----------------------------*/
+.titlePipas{
+    @extend .avisoTitle;
+    height: 50px;
+
+    h1{
+        @include titles;
+    }
+}
+
+.pipas{
+    @include gridProducts;
+
+    a{
+        @include allProducts;
+
+        span {
+            @include consult;
+        }
+    }
+
+    & &Imag{
+        @include imagProducts;
+    }
+}
+/*-------------------------Cigarros-----------------------*/
+.titleCigarros{
+    @extend .avisoTitle;
+    height: 50px;
+
+    h1{
+        @include titles;
+    }
+}
+
+.cigarros{
+    @include gridProducts;
+
+    a{
+        @include allProducts;
+
+        span {
+            @include consult;
+        }
+    }
+
+    & &Imag{
+        @include imagProducts;
+    }
+}
+
+/*-------------------------Tabaco--------------------------*/
+.titleTabaco{
+    @extend .avisoTitle;
+    height: 50px;
+
+    h1{
+        @include titles;
+    }
+}
+
+.tabaco{
+    @include gridProducts;
+
+    a{
+        @include allProducts;
+
+        span {
+            @include consult;
+        }
+    }
+
+    & &Imag{
+        @include imagProducts;
+    }
+}
+/*-------------------------Accesorios--------------------------*/
+.tittleAccesorios{
+    @extend .avisoTitle;
+    height: 50px;
+
+    h1{
+        @include titles;
+    }
+}
+
+.accesorios{
+    @include gridProducts;
+
+    a{
+        @include allProducts;
+
+        span {
+            @include consult;
+        }
+    }
+
+    & &Imag{
+        @include imagProducts;
+    }
+}
 /*------------------------CONTACTO-------------------------*/
 
 .titleContact{
@@ -196,6 +351,7 @@ $textos: (
     justify-content: space-around;
 
     & &Redes {
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -204,7 +360,11 @@ $textos: (
 
     & &Icon {
         display: flex;
-        justify-content: space-around;       
+        justify-content: space-around;
+        a{
+            text-decoration: none;
+            padding: 10px;
+        }
         span{
             padding: 10px;
             font: $mainStyle;
@@ -217,7 +377,13 @@ $textos: (
         color: map-get($textos , t2);
     }
 
+    & &Ifr{
+        display: flex;
+        justify-content: center;
+    }
+
     & &Mapa {
+        
         padding: 10px;
         border-radius: 20px;
     }
@@ -226,7 +392,6 @@ $textos: (
 .containerFormulario{
     display: flex;
     justify-content: center;
-    background-image: $fondoColor;
 
     legend {
         font-size: 2rem;
@@ -294,7 +459,7 @@ $textos: (
     p{
     width: 80%;
     padding: 15px;
-    color: $textColor;
+    color: map-get($textos , t2);
     font: $mainStyle;
     }
 
@@ -302,7 +467,7 @@ $textos: (
 
 
 .galeria {
-    background-image: $fondoColor;
+    /* background-image: $fondoColor; */
 
     & &Fotos{
         display: grid;
@@ -332,7 +497,7 @@ $textos: (
     }
 
     &Texto {
-        background-image: $fondoColor;
+        /* background-image: $fondoColor; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -390,16 +555,26 @@ $textos: (
         & &Direccion {
             margin-top: 20px;
         }
-
-        & &Mapa{
-            margin-left:4rem;
-        }
     }
 
-   /*  .headerLista a:hover {
-        display: none;
-    } */
+    .pipas{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .cigarros{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tabaco{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .accesorios {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
+
+/*--------------------------------------------------*/
 
 @media screen and (max-width: 992px) {
     .headerLista {
@@ -438,7 +613,25 @@ $textos: (
         font-size: 1rem;
     }
 
+    .pipas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cigarros{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tabaco{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .accesorios{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
+
+/*--------------------------------------------------*/
 
 @media screen and (max-width: 520px) {
     .containerMain p{
@@ -457,6 +650,7 @@ $textos: (
     .contactoMapa{
         height: 200px;
         width: 200px;
+        
     }
 
     .contactoDireccion p{
@@ -518,4 +712,39 @@ $textos: (
         height: 150px;
     }
 
+    .avisoProducts {
+        display: none;
+    }
+
+    .pipas{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titlePipas h1{
+        font-size: 1.3rem;
+    }
+
+    .cigarros{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titleCigarros h1{
+        font-size: 1.3rem;
+    }
+
+    .tabaco{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titleTabaco h1{
+        font-size: 1.3rem;
+    }
+
+    .tittleAccesorios h1{
+        font-size: 1.3rem;
+    }
+
+    .accesorios{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

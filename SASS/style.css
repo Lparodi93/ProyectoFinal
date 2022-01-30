@@ -10,15 +10,33 @@
   background-image: black;
 }
 
-.fd-ns {
+.fd-na {
   background-color: #3f3a3a;
   background-image: #3f3a3a;
+}
+
+.fd-ns {
+  background-color: linear-gradient(to bottom, #3f3a3a, #292727, black);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3f3a3a), color-stop(#292727), to(black));
+  background-image: linear-gradient(to bottom, #3f3a3a, #292727, black);
+}
+
+.fd-nt {
+  background-color: linear-gradient(to bottom, black, #292727, black);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(#292727), to(black));
+  background-image: linear-gradient(to bottom, black, #292727, black);
 }
 
 .fd-hd {
   background-color: linear-gradient(to left, #310b0b, #500b0b, black);
   background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
   background-image: linear-gradient(to left, #310b0b, #500b0b, black);
+}
+
+.fd-hn {
+  background-color: linear-gradient(to bottom, #310b0b, #500b0b, black);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#310b0b), color-stop(#500b0b), to(black));
+  background-image: linear-gradient(to bottom, #310b0b, #500b0b, black);
 }
 
 /*---------------------------INICIO--------------------------------/
@@ -56,7 +74,7 @@
 }
 
 /*-----------------------AVISOTITLE---------------------*/
-.avisoTitle, .titleProducts, .titleContact, .historiaTitle, .consejo {
+.avisoTitle, .titleProducts, .titlePipas, .titleCigarros, .titleTabaco, .tittleAccesorios, .titleContact, .historiaTitle, .consejo {
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,7 +91,7 @@
   border-color: moccasin;
 }
 
-.avisoTitle h4, .titleProducts h4, .titleContact h4, .historiaTitle h4, .consejo h4 {
+.avisoTitle h4, .titleProducts h4, .titlePipas h4, .titleCigarros h4, .titleTabaco h4, .tittleAccesorios h4, .titleContact h4, .historiaTitle h4, .consejo h4 {
   font-size: 1rem;
 }
 
@@ -91,9 +109,9 @@
 }
 
 /*-----------------------ContainerSection----------------*/
-.containerSection {
-  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
-  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
+.containerSection img {
+  border-radius: 10px;
+  border: 10px solid black;
 }
 
 /*---------------------------Aside-----------------------*/
@@ -186,13 +204,249 @@
 }
 
 #containerMainProducts {
-  background-image: url(../img/fondoproductos.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#310b0b), color-stop(#500b0b), to(black));
+  background-image: linear-gradient(to bottom, #310b0b, #500b0b, black);
 }
 
 #containerMainProducts h2 {
   color: moccasin;
+}
+
+.avisoProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30vh;
+  color: white;
+}
+
+.avisoProducts p {
+  font: 2rem "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
+.cardShadow {
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
+}
+
+/*--------------------------Pipas----------------------------*/
+.titlePipas {
+  height: 50px;
+}
+
+.titlePipas h1 {
+  font: 1.8rem "Shippori Antique", sans-serif;
+  color: moccasin;
+}
+
+.pipas {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+  justify-items: center;
+  width: 100%;
+  padding: 30px;
+}
+
+.pipas a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.pipas a span {
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: rgba(26, 25, 25, 0.705);
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.pipas .pipasImag {
+  height: auto;
+  border-end-end-radius: 20px;
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
+}
+
+/*-------------------------Cigarros-----------------------*/
+.titleCigarros {
+  height: 50px;
+}
+
+.titleCigarros h1 {
+  font: 1.8rem "Shippori Antique", sans-serif;
+  color: moccasin;
+}
+
+.cigarros {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+  justify-items: center;
+  width: 100%;
+  padding: 30px;
+}
+
+.cigarros a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.cigarros a span {
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: rgba(26, 25, 25, 0.705);
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.cigarros .cigarrosImag {
+  height: auto;
+  border-end-end-radius: 20px;
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
+}
+
+/*-------------------------Tabaco--------------------------*/
+.titleTabaco {
+  height: 50px;
+}
+
+.titleTabaco h1 {
+  font: 1.8rem "Shippori Antique", sans-serif;
+  color: moccasin;
+}
+
+.tabaco {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+  justify-items: center;
+  width: 100%;
+  padding: 30px;
+}
+
+.tabaco a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.tabaco a span {
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: rgba(26, 25, 25, 0.705);
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.tabaco .tabacoImag {
+  height: auto;
+  border-end-end-radius: 20px;
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
+}
+
+/*-------------------------Accesorios--------------------------*/
+.tittleAccesorios {
+  height: 50px;
+}
+
+.tittleAccesorios h1 {
+  font: 1.8rem "Shippori Antique", sans-serif;
+  color: moccasin;
+}
+
+.accesorios {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+  justify-items: center;
+  width: 100%;
+  padding: 30px;
+}
+
+.accesorios a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.accesorios a span {
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: rgba(26, 25, 25, 0.705);
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.accesorios .accesoriosImag {
+  height: auto;
+  border-end-end-radius: 20px;
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
 }
 
 /*------------------------CONTACTO-------------------------*/
@@ -237,6 +491,11 @@
       justify-content: space-around;
 }
 
+.contacto .contactoIcon a {
+  text-decoration: none;
+  padding: 10px;
+}
+
 .contacto .contactoIcon span {
   padding: 10px;
   font: 2rem "Josefin Sans", sans-serif;
@@ -246,6 +505,15 @@
 .contacto .contactoDireccion {
   font: 2rem "Josefin Sans", sans-serif;
   color: moccasin;
+}
+
+.contacto .contactoIfr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contacto .contactoMapa {
@@ -260,8 +528,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
-  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
 }
 
 .containerFormulario legend {
@@ -349,8 +615,7 @@
 }
 
 .galeria {
-  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
-  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
+  /* background-image: $fondoColor; */
 }
 
 .galeria .galeriaFotos {
@@ -385,8 +650,7 @@
 }
 
 .consejoTexto {
-  background-image: -webkit-gradient(linear, right top, left top, from(#310b0b), color-stop(#500b0b), to(black));
-  background-image: linear-gradient(to left, #310b0b, #500b0b, black);
+  /* background-image: $fondoColor; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,14 +721,25 @@
   .contacto .contactoDireccion {
     margin-top: 20px;
   }
-  .contacto .contactoMapa {
-    margin-left: 4rem;
+  .pipas {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
-  /*  .headerLista a:hover {
-        display: none;
-    } */
+  .cigarros {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .tabaco {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .accesorios {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
+/*--------------------------------------------------*/
 @media screen and (max-width: 992px) {
   .headerLista {
     -webkit-box-align: end;
@@ -499,13 +774,30 @@
   .fontList a {
     font-size: 1rem;
   }
+  .pipas {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .cigarros {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .tabaco {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .accesorios {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/*--------------------------------------------------*/
 @media screen and (max-width: 520px) {
   .containerMain p {
     font-size: 1rem;
   }
-  .avisoTitle h4, .titleProducts h4, .titleContact h4, .historiaTitle h4, .consejo h4 {
+  .avisoTitle h4, .titleProducts h4, .titlePipas h4, .titleCigarros h4, .titleTabaco h4, .tittleAccesorios h4, .titleContact h4, .historiaTitle h4, .consejo h4 {
     font-size: 0.7rem;
   }
   .containerTitle h2 {
@@ -558,6 +850,37 @@
   }
   .mainDesc img {
     height: 150px;
+  }
+  .avisoProducts {
+    display: none;
+  }
+  .pipas {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .titlePipas h1 {
+    font-size: 1.3rem;
+  }
+  .cigarros {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .titleCigarros h1 {
+    font-size: 1.3rem;
+  }
+  .tabaco {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .titleTabaco h1 {
+    font-size: 1.3rem;
+  }
+  .tittleAccesorios h1 {
+    font-size: 1.3rem;
+  }
+  .accesorios {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 /*# sourceMappingURL=style.css.map */
