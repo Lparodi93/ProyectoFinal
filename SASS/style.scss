@@ -647,13 +647,18 @@ $textos: (
         font-size: 1rem;
     }
 
+    .contactoIfr{
+        padding-bottom: 3rem;
+    } 
+
     .contactoMapa{
         height: 200px;
-        width: 200px;
-        
+        width: 200px;    
     }
 
     .contactoDireccion p{
+        position: relative;
+        bottom: 2rem;
         font-size: 1rem;
     }
 
